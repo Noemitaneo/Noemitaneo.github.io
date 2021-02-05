@@ -1,0 +1,274 @@
+/* import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Amiko:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Amiko:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amaranth:ital@1&display=swap");
+
+/* Chrome Bug Fix */
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+/* Bootstrap Padding Fix */
+[class*="col-"] {
+  padding: 3rem;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Extra
+  small
+  devices
+  (portrait phones, less than 576px)
+  No
+  media
+  query
+  for
+  `xs`
+  since
+  this
+  is
+  the
+  default
+  in
+  Bootstrap
+  Small
+  devices
+  (landscape phones, 576px and up)
+  @media
+  (min-width: 576px) {
+  ...;
+}
+
+Medium devices (tablets, 768px and up) @media (min-width: 768px) {
+  ...;
+}
+
+Large devices (desktops, 992px and up) @media (min-width: 992px) {
+  ...;
+}
+
+Extra large devices (large desktops, 1200px and up) @media (min-width: 1200px) {
+  ...;
+} */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #2e4959;
+  font-family: "Amiko", sans-serif;
+}
+
+.navbar {
+  padding: 15px;
+}
+
+.m-heading {
+  font-family: Amaranth;
+  src: url("https://fonts.googleapis.com/css2?family=Amaranth:ital@1&display=swap");
+  font-size: 55px;
+  font-weight: 500;
+  color: whitesmoke;
+}
+.titles {
+  font-family: Amaranth;
+  src: url("https://fonts.googleapis.com/css2?family=Amaranth:ital@1&display=swap");
+  font-size: 25px;
+  font-weight: 500;
+}
+
+/* start navigation */
+.navbar-nav li {
+  padding-right: 30px;
+  font-size: 18px;
+}
+
+.navigation-link {
+  border: 2px solid transparent;
+  /* padding-right: 20px;
+  padding-left: 20px; */
+  color: whitesmoke;
+}
+
+.navigation-link:hover {
+  text-decoration: none;
+  border-bottom: 2px solid #2e4959;
+  transition: 0.5s ease;
+}
+.logo {
+  font-family: Amaranth;
+  font-size: 30px;
+  color: whitesmoke;
+  font-weight: 500;
+}
+
+/* main page */
+/* header {
+  height: 100vh;
+  background: url(/img/fotograper/p1.jpg) no-repeat center center/cover;
+  margin-bottom: 70px;
+} */
+
+.main-container {
+  min-height: 100vh;
+  padding-inline-start: 9rem;
+  padding-inline-end: 10rem;
+}
+
+.main-row {
+  display: flex;
+  text-align: left;
+  align-items: left;
+}
+
+.banner {
+  position: absolute;
+  top: 40%;
+  left: 1%;
+}
+
+.head {
+  animation-name: slide;
+  animation-duration: 2s;
+  font-size: 35px;
+}
+.name {
+  animation-name: slide;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* About area */
+
+#about {
+  background: #733702;
+  margin-top: 70px;
+  margin-bottom: 65px;
+}
+
+.text {
+  font-size: 15px;
+}
+
+/* Project Area */
+
+.carousel-item {
+  align-items: center;
+}
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+  padding: 0px 45px;
+  margin-top: 65px;
+}
+.project-title {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+/* Newsletter area */
+
+.subscribe {
+  background-color: #733702;
+  padding: 6rem 0;
+  margin: 3rem 5rem;
+}
+
+.subscribe-title {
+  font-family: Amaranth;
+  font-size: 20px;
+}
+
+.form-control {
+  width: 35rem;
+  padding: 1.4rem 5px;
+  display: block;
+  height: calc(1rem + 0.5rem + 2px);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: 2px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn {
+  color: #ced4da;
+  font-weight: bold;
+  border: transparent;
+  font-size: 15px;
+  padding: 1.4rem 10px;
+  background-color: none;
+}
+
+/* Lets connect area */
+
+.social a {
+  font-size: 45px;
+  padding: 3rem;
+}
+
+.fa-facebook,
+.fa-twitter,
+.fa-instagram,
+.fa-linkedin {
+  color: #733702;
+}
+.fa-facebook:hover {
+  color: #3b5998;
+}
+.fa-twitter:hover {
+  color: #00aced;
+}
+.fa-instagram:hover {
+  color: #dd2a7b;
+}
+.fa-linkedin:hover {
+  color: #0e76a8;
+}
+
+hr.light {
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.logo2 {
+  font-family: Amaranth;
+  font-size: 15px;
+  color: whitesmoke;
+  font-weight: 500;
+}
+.cont {
+  font-size: 15px;
+}
+/* media queries */
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 576px) {
+}
